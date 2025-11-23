@@ -1,0 +1,25 @@
+{
+  "name": "@qwik-rte/lib",
+  "version": "1.0.0",
+  "description": "A reusable Rich Text Editor built with Qwik signals",
+  "type": "module",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "peerDependencies": {
+    "@builder.io/qwik": "^1.5.0"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "^1.5.0",
+    "vitest": "^1.0.0",
+    "jsdom": "^23.0.0"
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage"
+  }
+}
+
