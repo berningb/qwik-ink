@@ -9,10 +9,12 @@ export const Toolbar = component$((props) => {
     currentFormat,
     currentList,
     currentAlignment,
+    currentLineSpacing,
     execCommand$,
     handleFormatChange$,
     handleListChange$,
     handleAlignmentChange$,
+    handleLineSpacingChange$,
     toggleMode$,
   } = props;
 
@@ -140,6 +142,22 @@ export const Toolbar = component$((props) => {
                 <rect x="0" y="12" width="16" height="2" rx="0.5"/>
               </svg>
             </button>
+
+            {/* Line Spacing Dropdown */}
+            <select
+              class="bg-white border border-gray-300 rounded px-1 py-1 text-xs hover:bg-gray-100 text-gray-700 w-14 transition-all duration-150 cursor-pointer ml-1"
+              onChange$={handleLineSpacingChange$}
+              value={currentLineSpacing.value}
+              title="Line Spacing"
+            >
+              <option value="1">1.0</option>
+              <option value="1.15">1.15</option>
+              <option value="1.5">1.5</option>
+              <option value="1.75">1.75</option>
+              <option value="2">2.0</option>
+              <option value="2.5">2.5</option>
+              <option value="3">3.0</option>
+            </select>
           </>
         )}
       </div>
